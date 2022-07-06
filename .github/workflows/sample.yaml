@@ -5,18 +5,14 @@ on:
       - master
 
 jobs:
-  sample-job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "this is pen"
   merge:
     runs-on: ubuntu-latest
     steps:
       - name: git checkout
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
+        # with:
+        #   token: ${{ secrets.GITHUB_TOKEN }}
+        #   fetch-depth: 0
       - name: perform merge
         run: |
           git config --global user.email "${GITHUB_ACTOR}"
