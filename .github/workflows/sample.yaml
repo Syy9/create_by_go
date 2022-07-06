@@ -18,9 +18,11 @@ jobs:
           git config --global user.email "${GITHUB_ACTOR}"
           git config --global user.name "${GITHUB_ACTOR}@users.noreply.github.com"
           git branch
+          git log -3
           git status
           git pull
           git checkout "sandbox1"
+          git log -3
           git status
           git merge origin/master --no-edit
           git push
