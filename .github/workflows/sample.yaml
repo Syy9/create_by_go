@@ -1,0 +1,7 @@
+name: hoge-fuga
+on: [push]
+jobs:
+  sample-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "this is pen"
