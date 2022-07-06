@@ -1,5 +1,9 @@
 name: hoge-fuga
-on: [push]
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   sample-job:
     runs-on: ubuntu-latest
